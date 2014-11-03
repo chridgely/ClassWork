@@ -1,6 +1,5 @@
 (*This is my code but highly inspired by Dr. Binkley's scm solution*)
-(*Currently non-functional*)
-
+(*Currently not functioning*)
 
 (*Purpose: This will apply the proper operator to the numbers*)
 (*Inputs:  A number 'a', 'b' and a character to be the operator*)
