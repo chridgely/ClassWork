@@ -1,4 +1,5 @@
 (*This is my code but highly inspired by Dr. Binkley's scm solution*)
+(*Currently non-functional*)
 
 
 (*Purpose: This will apply the proper operator to the numbers*)
@@ -18,7 +19,7 @@ fun eval_helper null stack = stack
        if (Char.isDigit(hd exp)) then eval_helper (tl exp) (hd exp::stack)
        else eval_helper (tl exp) ((apply_operation(hd exp) (Real.fromInt(Char.ord(hd stack)-48)) 
                    (Real.fromInt(Char.ord(hd(tl stack)))))::(tl(tl stack)))
-                   (* ^--  I couldn't figure out how to make this a real list instead of a char list*)
+                   (* ^--  I couldn't figure out how to make this a real list instead of a char list, will update*)
 
    ;
      
