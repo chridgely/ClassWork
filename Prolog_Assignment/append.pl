@@ -18,21 +18,21 @@ Purpose: Find third place in a list
 In: 1 List and Result Variable
 Out: Third place's value
 */
-findThird(X) :- append([_,_,X], _, Z).
+findThird(X,Z) :- append([_,_,X], _, Z).
 
 /*
 Purpose: Find last element of a list
 In: 1 List and Result Variable
 Out: Last element
 */
-findLast(X) :- append(_, [X], Z).
+findLast(X,Z) :- append(_, [X], Z).
 
 /*
 Purpose: Find all but the last element in the list
 In: 1 List and Result Variable
 Out: All elements but the last one
 */
-notLast(X) :-append(X, [_], Z).
+notLast(X,Z) :-append(X, [_], Z).
 
 /*
 Purpose: If a list is a concatenation of three copies of the same sublist
@@ -46,4 +46,5 @@ Purpose: Whether a list Y is formed by inserting an element A somewhere in a lis
 In: 2 Lists and Result Variable
 Out: User selected place
 */
+
 
