@@ -18,20 +18,20 @@ public class TreeNode {
 		rightNode = null;
 	}
 	//Here be the overloaded constructor
-	public TreeNode(int v, TreeNode l, TreeNode r){
+	public TreeNode(int v){
 		value = v;
-		leftNode = l;
-		rightNode = r;
+		leftNode = null;
+		rightNode = null;
 	}
 	//Mutator for the left
 	public void setLeftNode(int value){
-		TreeNode newNode = new TreeNode(value, null, null);
+		TreeNode newNode = new TreeNode(value);
 		leftNode = newNode;
 	}
 	
 	//Mutator for the right
 	public void setRightNode(int value){
-		TreeNode newNode = new TreeNode(value, null, null);
+		TreeNode newNode = new TreeNode(value);
 		rightNode = newNode;
 	}
 	
