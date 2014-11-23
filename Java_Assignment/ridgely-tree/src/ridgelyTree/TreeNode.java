@@ -4,57 +4,80 @@ public class TreeNode {
 	private int value;
 	private TreeNode leftNode;
 	private TreeNode rightNode;
-	//Creating the Node Object
-	/*
-	 * Node to the Left
-	 * Node to the Right
-	 * Integer Number
-	 * */
 	
-	//Here be the constructor
+	/*
+	 * Purpose: The default constructor
+	 * In: Nothing
+	 * Out: TreeNode class object
+	 */
 	public TreeNode(){
 		value = 0;
 		leftNode = null;
 		rightNode = null;
 	}
-	//Here be the overloaded constructor
+	/*
+	 * Purpose: The overloaded Constructor
+	 * In: An integer value
+	 * Out: TreeNode class object initialized to an integer
+	 */
 	public TreeNode(int v){
 		value = v;
 		leftNode = null;
 		rightNode = null;
 	}
-	//Mutator for the left
+	/*
+	 * Purpose: Left node mutator
+	 * In: An integer value
+	 * Out: Sets the left node equal to a node with the integer value
+	 */
 	public void setLeftNode(int value){
 		TreeNode newNode = new TreeNode(value);
 		leftNode = newNode;
 	}
 	
-	//Mutator for the right
-	public void setRightNode(int value){
+	/*
+	 * Purpose: Right node mutator
+	 * In: An integer value
+	 * Out: Sets the right node equal to a node with the integer value
+	 */	public void setRightNode(int value){
 		TreeNode newNode = new TreeNode(value);
 		rightNode = newNode;
 	}
 	
-	//Accessor for the right
+	/*
+	 * Purpose: Right node accessor
+	 * In: Nothing
+	 * Out: Returns the right node object
+	 */
 	public TreeNode getRightNode(){
 		return rightNode;
 	}
 	
-	//Accessor for the left
+	/*
+	 * Purpose: Left node accessor
+	 * In: Nothing
+	 * Out: Returns the left node obeject
+	 */
 	public TreeNode getLeftNode(){
 		return leftNode;
 	}
 	
-	//Mutator for the value
+	/*
+	 * Purpose: Value mutator
+	 * In: integer value
+	 * Out: Sets the value of the node equal to the argument
+	 */
 	public void setValue(int v){
 		value = v;
 	}
 	
-	//Accessor for the value
+	/*
+	 * Purpose: Accessor for the value
+	 * In: Nothing
+	 * Out: Returns the value
+	 */
 	public int getValue(){
 		return value;
 	}
-	
-	//Method with a sort method? Might work better in the tree class
-	
+		
 }
