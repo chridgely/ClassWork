@@ -1,3 +1,8 @@
+#I chose this language because I have always wanted to learn python
+#as well as the extra motivation from that guy that solves DNA.
+#I mean, who doesn't want to learn a language named after monty python?
+
+
 __author__ = 'Chris'
 import random
 
@@ -9,7 +14,9 @@ outcomes = ['it was a tie', 'you lost', 'you won']
 
 # This is the game of rock paper scissors as implemented in Python
 
-
+#Purpose: The checks to see if a number is odd
+#In: a number
+#Out: a boolean true or false
 def is_odd(num):
     "Checking to see if the number is odd"
     if (num % 2) == 0:
@@ -17,7 +24,9 @@ def is_odd(num):
     else:
         return True
 
-
+#Purpose: This prompt the user for the number of games to play, must be odd number
+#In: Asks user to input a number
+#Out: returns the number if valid, if not, prompts user again
 def get_valid_number():
     "Receiving a valid input from user"
     num = input("How many games would you like to play(Must be odd)\n")
@@ -28,7 +37,9 @@ def get_valid_number():
         get_valid_number()
     return num
 
-
+#Purpose: Randomly generates the computer's RPS hand
+#In: No input. Random number is created within method
+#Out: What hand the cpu threw, rock paper or scissors
 def get_cpu_hand():
     "Is the computer throwing rock paper or scissors"
     rand = random.random()
@@ -40,7 +51,10 @@ def get_cpu_hand():
         hand = Scissors
     return hand
 
-
+#Purpose: Prompts the user for his decision, rock paper scissors or quit
+#In: the string rock paper scissors or quit
+#Out: returns what hand the user selected
+#Notes: Realistically this could also be implemented in a switch statement
 def get_user_hand():
     usr = raw_input("What do you throw? (rock, paper, scissors or quit)\n")
     if usr == 'rock':
@@ -53,11 +67,15 @@ def get_user_hand():
         hand = 4
     return hand
 
-
+#Purpose: Organizes data into human readable format
+#In: The user's hand, cpu's hand, the outcome and the score
+#Out: a strings which combines all the data
 def to_string(usr_hand, cpu_hand, outcome, score):
     return "You threw %s and and the computer threw %s so %s ---- %d vs %d" % (usr_hand, cpu_hand, outcome, score[0], score[1])
 
-
+#Purpose: These are the rules of RPS, what hands trump what
+#In: the user's hand, the cpu's hand and the current score
+#Out: prints the outcome and returns the score
 def rules_of_hands(usr, cpu, score):
 
     if(usr == Quit):
@@ -103,12 +121,16 @@ def rules_of_hands(usr, cpu, score):
             return score
     return;
 
-
+#Purpose: This is just one game of RPS. Mainly created for readability
+#In: The score
+#Out: The score
 def one_game(score):
     score = rules_of_hands(get_user_hand(), get_cpu_hand(), score)
     return score
 
-
+#Purpose: This is the main method to be executed
+#In: method requested inputs
+#Out: method outputs
 def main():
     score = [0, 0]
     games = get_valid_number()
