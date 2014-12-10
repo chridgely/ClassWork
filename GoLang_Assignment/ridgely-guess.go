@@ -1,3 +1,7 @@
+//I chose this language because this was the other language which
+//I was interested beside Swift, my pet. I just thought it was an
+//interesting language and wanted to try it out. No other reason
+
 package main
 
 import (
